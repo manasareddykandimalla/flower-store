@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0917022522.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="brand">
+          Flower Store
+        </div>
+        <div class="options">
+          <div class="icon">
+            <i class="fas fa-store" onclick="homefun()"></i> Shop
+          </div>
+          <div class="icon">
+            <i onclick="dispadd()" class="fas fa-address-card"></i> Address
+          </div>
+          <div class="icon">
+            <i  id="cart" onclick="disp()" class="fas fa-shopping-cart"></i> Cart
+          </div>
+        </div>
+      </div>
+      <img src="back.png" alt="flowers" class="flower">
+      <p class="heading">1/4 kg packs </p>
+      <ul class="menu-items">
+          <li class="menu-item">
+            <div>🌹 Rose</div><div>Rs.40</div>
+            <div id="icons1" class="icons">
+            <div class="plus">
+              <i id="plus1" onclick="add(1)" class="fas fa-plus-square"></i>
+            </div>
+            <div class="minus">
+              <i id="minus1" onclick="sub(1)" class="fas fa-minus-square"></i>
+            </div>
+            <span id="badge1" style="display: none;" class="badge">0</span>
+            </div>
+          </li><br>
+          <li class="menu-item">
+            <div>🌺 Hibiscus</div><div>Rs.60</div>
+              <div id="icons2" class="icons">
+                <div class="plus">
+                  <i id="plus2" onclick="add(2)" class="fas fa-plus-square"></i>
+                </div>
+                <div class="minus">
+                  <i id="minus2" onclick="sub(2)" class="fas fa-minus-square"></i>
+                </div>
+                <span id="badge2" style="display: none;" class="badge">0</span>
+              </div>
+          </li><br>
+          <li class="menu-item">
+            <div>🌷 Tulip</div><div>Rs.150</div>
+              <div id="icons3" class="icons">
+                <div class="plus">
+                  <i id="plus3" onclick="add(3)" class="fas fa-plus-square"></i>
+                </div>
+                <div class="minus">
+                  <i id="minus3" onclick="sub(3)" class="fas fa-minus-square"></i>
+                </div>
+                <span id="badge3" style="display: none;" class="badge">0</span>
+                </div>
+                </li><br>
+          <li class="menu-item">
+            <div>🌻 Sunflower</div><div>Rs.110</div>
+              <div id="icons4" class="icons">
+                <div class="plus">
+                  <i id="plus4" onclick="add(4)" class="fas fa-plus-square"></i>
+                </div>
+                <div class="minus">
+                  <i id="minus4" onclick="sub(4)" class="fas fa-minus-square"></i>
+                </div>
+                <span id="badge4" style="display: none;" class="badge">0</span>
+              </div>
+          </li><br>
+      </ul>
+      <div class="total">
+        Total: Rs.<span id="tot">0</span>
+      </div>
+          <div class="modal" id="modalid">
+            <h4>Your Order</h4>
+            <hr>
+            <ul class="menu-items1">
+                <li class="menu-item1">
+                  <div>🌹 Rose</div> <span id="badge1c" class="badge">0</span> <span>x</span> <div>Rs.40</div>
+                </li><br>
+                <li class="menu-item1">
+                  <div>🌺 Hibiscus</div> <span id="badge2c" class="badge">0</span> <span>x</span> <div>Rs.60</div>
+                </li><br>
+                <li class="menu-item1">
+                  <div>🌷 Tulip</div>  <span id="badge3c" class="badge">0</span> <span>x</span> <div>Rs.150</div>
+                </li><br>
+                <li class="menu-item1">
+                  <div>🌻 Sunflower</div> <span id="badge4c" class="badge">0</span> <span>x</span><div>Rs.110</div>
+                </li><br>
+            </ul>
+            <div class="totalcart">
+              Total: Rs.<span id="totcart">0</span>
+            </div>
+            <hr>
+            <div class="buttons">
+              <button type="button" class="closeb" onclick="closefun()">close</button>
+              <button type="button" class="payb" onclick="orderfun()">Place Order</button>
+            </div>
+      </div>
+      <div class="modal1" id="modalid1">
+        <h4>Address</h4>
+        <hr>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          id="inputFirst"
+          placeholder="First Name">
+
+          <input type="text"
+          class="form-control"
+          id="inputLast"
+          placeholder="Last Name">
+
+          <input type="email"
+          class="form-control"
+          id="Email"
+          placeholder="E-mail">
+
+          <input type="street"
+            class="form-control"
+            id="address1"
+            placeholder="Address Line 1">
+
+          <input type="street"
+            class="form-control"
+            id="address2"
+            placeholder="Address Line 2">
+
+          <input type="city"
+             class="form-control"
+             id="inputCity"
+             placeholder="City">
+
+          <input type="state"
+             class="form-control"
+             id="inputState"
+             placeholder="State">
+
+         <input type="zip"
+             class="form-control"
+             id="inputZip"
+             placeholder="Pin">
+
+         <input type="country"
+             class="form-control"
+             id="inputCountry"
+             placeholder="Country">
+        </div>
+        <hr>
+        <div class="buttons">
+          <button type="button" class="closeb" onclick="closefun1()">close</button>
+          <button type="submit" class="btn" onclick="alert('thanks for filling your details! check your mail for more about us!')">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
